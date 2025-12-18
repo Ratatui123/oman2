@@ -75,7 +75,7 @@ section h2 {
 
 .hero {
   height: 90vh;
-   background: url('pictures /herosection.jpg') center/cover no-repeat;
+   background: url('pictures/herosection.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
