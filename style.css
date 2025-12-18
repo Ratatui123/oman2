@@ -1044,3 +1044,37 @@ footer {
 }
 
 
+/* STACK TWO-COLUMN SECTIONS ON MOBILE */
+@media (max-width: 768px) {
+  .two-column-section {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    gap: 2rem;               /* space between image and text */
+  }
+
+  .image-column-left,
+  .image-column,
+  .text-column-right,
+  .text-column {
+    flex: 1 1 100%;          /* full width */
+    text-align: center;      /* center text if desired */
+  }
+
+  .text-column-right h2,
+  .text-column h2 {
+    font-size: 1.5rem;       /* smaller headings */
+  }
+
+  .text-column-right p,
+  .text-column p {
+    font-size: 0.95rem;      /* smaller paragraphs */
+  }
+
+  .square-image,
+  .single-image {
+    width: 90%;               /* bigger images on mobile */
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
