@@ -75,7 +75,7 @@ section h2 {
 
 .hero {
   height: 90vh;
-  background-image: url('pictures/herosection.jpg'); 
+  background-image: url('pictures /herosection.jpg'); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
