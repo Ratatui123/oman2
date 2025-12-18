@@ -1007,20 +1007,12 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .destination-info h2 {
-    font-size: 1.5rem;
-  }
-
-  .destination-info p {
-    font-size: 1rem;
-  }
+@media (max-width: 420px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  p  { font-size: 0.95rem; }
 }
-
 
 /* ---------------Video wrapper--------------------------------------- */
 .video-wrapper {
@@ -1050,10 +1042,5 @@ footer {
 .home-btn:hover{
   background-color: #FF6600;
 }
-@media (max-width: 420px) {
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.1rem; }
-  p  { font-size: 0.95rem; }
-}
+
 
