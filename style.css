@@ -1078,3 +1078,24 @@ footer {
     margin: 0 auto;
   }
 }
+.card figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card figure img {
+  width: 100%;
+  display: block;
+}
+
+.card figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.75rem;
+  color: #fff;
+  
+}
