@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Geography — Oman</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+    <body class="geography-page">
+    
+
+<section class="hero no-bg" id="home">
+	<!-- Navbar -->
+	<nav>
+		<div class="logo">Travel Oman</div>
+
+		<!-- Hamburger Button -->
+		<button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+			aria-controls="primary-navigation-geo"
+			onclick="toggleMenu('primary-navigation-geo', this)">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<!-- Navigation Links -->
+		<ul class="nav-links" id="primary-navigation-geo" role="menubar" aria-hidden="true">
+       <li role="none"><a role="menuitem" href="about .html">About</a></li>
+			<li role="none"><a role="menuitem" href="index.html">Home</a></li>
+			<li role="none"><a role="menuitem" href="thingstodo.html">Things to Do</a></li>
+			<li role="none"><a role="menuitem" href="destination.html">Destinations</a></li>
+			<li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<div class="hero-content">
+  <h1 class="page-title">Geography of Oman</h1>
+</div>
+</section>
+
+<main class="page-main">
+
+  <!-- Section 1 — Intro -->
+<section class="two-column-section">
+  <figure class="image-column-left">
+    <img class="single-image" src="pictures /pexels-reyyan-505450018-31254200.jpg" alt="picture by reyyan">
+    <figcaption class="single-image-caption">
+      From desert dunes to coastlines — Oman’s varied landscapes.
+    </figcaption>
+  </figure>
+
+  <div class="text-column-right">
+    <h2>Geography of Oman</h2>
+    <p>Oman is a land of remarkable geographic diversity, featuring arid deserts, rugged mountains, fertile valleys, and pristine coastlines along the Arabian Sea. This variety shapes the climate, ecosystems, and lifestyle of its people.</p>
+  </div>
+</section>
+
+<!-- Section 2 — Mountains & Highlands -->
+<section class="two-column-section">
+  <div class="text-column">
+    <h2>Mountains & Highlands</h2>
+    <p>The Hajar Mountains dominate northern Oman, with peaks like Jebel Shams and Jebel Akhdar. These highlands create dramatic landscapes of canyons, terraced farms, and wadis, supporting both wildlife and human settlements.</p>
+  </div>
+
+  <figure class="image-column">
+    <img class="single-image" src="pictures /pexels-eslames1-34919507.jpg" alt="picture by eslames1">
+    <figcaption class="single-image-caption">The rugged Hajar Mountains shape northern Oman’s climate and culture.</figcaption>
+  </figure>
+</section>
+
+<!-- Section 3 — Deserts & Wadis -->
+<section class="two-column-section">
+  <figure class="image-column-left">
+    <img class="single-image" src="pictures /pexels-reyyan-505450018-30785939.jpg" alt="picture by reyyan">
+    <figcaption class="single-image-caption">
+      The golden dunes of Wahiba Sands in central Oman.
+    </figcaption>
+  </figure>
+
+  <div class="text-column-right">
+    <h2>Deserts & Wadis</h2>
+    <p>The central deserts, including Wahiba Sands, feature shifting dunes and unique ecosystems. Interspersed with these arid landscapes are lush wadis — valleys carved by seasonal rivers, supporting agriculture, wildlife, and small communities.</p>
+   <div class="btn-center">
+  <a class="home-btn" href="index.html">Home</a>
+</div>  
+  </div>
+</section>
+
+
+</main>
+
+
+<footer>
+	<div style="max-width:1200px;margin:0 auto;padding:1rem 5%;color:#fff;">
+		&copy; Travel Oman
+	</div>
+</footer>
+
+<script>
+function toggleMenu(navId, btn) {
+	const nav = document.getElementById(navId);
+	if (!nav || !btn) return;
+	const isOpen = nav.classList.toggle('active');
+	btn.classList.toggle('open');
+	btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+	nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+	if (isOpen) {
+		const firstLink = nav.querySelector('a');
+		if (firstLink) firstLink.focus();
+	} else {
+		btn.focus();
+	}
+}
+</script>
+
+</body>
+</html>

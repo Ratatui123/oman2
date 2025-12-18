@@ -1,0 +1,108 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Things to Do</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <body class="culture-page"></body>
+<section class="hero no-bg" id="home">
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Travel Oman</div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+      aria-controls="primary-navigation-culture"
+      onclick="toggleMenu('primary-navigation-culture', this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="primary-navigation-culture" role="menubar" aria-hidden="true">
+       <li role="none"><a role="menuitem" href="about .html">About</a></li>
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="thingstodo.hml">Things to Do</a></li>
+      <li role="none"><a role="menuitem" href="destination.html">Destinations</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1 class="page-title">Things to Do in Oman</h1>
+  </div>
+</section>
+
+<main class="page-main">
+  <section class="two-column-section">
+    <figure class="image-column-left">
+      <img class="square-image" src="pictures /pexels-ema-mohammed-1617422-3101780.jpg" alt="picture by Ema Mohammed">
+      <figcaption class="square-image-caption">Explore Oman's top attractions and activities.</figcaption>
+    </figure>
+    <div class="scroll-text">Scroll</div>
+    <div class="text-column-right">
+      <h2>Discover Amazing Experiences</h2>
+      <p>Oman offers a wealth of unforgettable experiences for travelers. From exploring ancient wadis and hiking mountain trails to relaxing on pristine beaches and experiencing vibrant souks, there's something for everyone.</p>
+      <p>Visit the stunning Muscat waterfront, trek through Wadi Shab's turquoise pools, or spend an evening watching the sunset from a desert camp. Whether you're seeking adventure, cultural immersion, or relaxation, Oman's diverse attractions promise memories that will last a lifetime.</p>
+      
+    </div>
+  </section>
+
+  <section class="two-column-section">
+    <div class="text-column">
+      <h2>Immerse in Local Culture</h2>
+      <p>Experience the authentic spirit of Oman by visiting traditional souks, where merchants display colorful spices, handcrafted goods, and intricate silver jewelry. The warmth and hospitality of the Omani people make every interaction memorable.</p>
+      <p>Attend local festivals, taste traditional cuisine at family-run restaurants, and learn about centuries-old crafts. These experiences offer deeper insights into Oman's rich cultural heritage and the values that define its people.</p>
+    </div>
+    <figure class="image-column">
+      <img class="single-image" src="pictures /pexels-mihirs1970-33516570.jpg" alt="picture by Mihir S1970">
+      <figcaption class="single-image-caption">Experience authentic Omani traditions and hospitality.</figcaption>
+    </figure>
+  </section>
+
+  <section class="two-column-section">
+    <figure class="image-column-left">
+      <img class="square-image" src="pictures /pexels-saad-alawi-123396395-10010324.jpg" alt="picture by Saad Alawi">
+      <figcaption class="square-image-caption">Explore Oman's top attractions and activities.</figcaption>
+    </figure>
+    <div class="text-column-right">
+      <h2>Discover Amazing Experiences</h2>
+      <p>Oman offers a wealth of unforgettable experiences for travelers. From exploring ancient wadis and hiking mountain trails to relaxing on pristine beaches and experiencing vibrant souks, there's something for everyone.</p>
+      <p>Visit the stunning Muscat waterfront, trek through Wadi Shab's turquoise pools, or spend an evening watching the sunset from a desert camp. Whether you're seeking adventure, cultural immersion, or relaxation, Oman's diverse attractions promise memories that will last a lifetime.</p>
+       <a class="home-btn" href="index.html">Home</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div style="max-width:1200px;margin:0 auto;padding:1rem 5%;color:#fff;">
+    &copy; Site by Ben
+  </div>
+</footer>
+
+<script>
+function toggleMenu(navId, btn) {
+  const nav = document.getElementById(navId);
+  if (!nav || !btn) return;
+  const isOpen = nav.classList.toggle('active');
+  btn.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  if (isOpen) {
+    const firstLink = nav.querySelector('a');
+    if (firstLink) firstLink.focus();
+  } else {
+    btn.focus();
+  }
+}
+</script>
+
+</body>
+</html>

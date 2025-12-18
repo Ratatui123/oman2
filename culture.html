@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture — Oman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <body class="culture-page"></body>
+<section class="hero no-bg" id="home">
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Travel Oman</div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+      aria-controls="primary-navigation-culture"
+      onclick="toggleMenu('primary-navigation-culture', this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="primary-navigation-culture" role="menubar" aria-hidden="true">
+       <li role="none"><a role="menuitem" href="about .html">About</a></li>
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="thingstodo.html">Things to Do</a></li>
+      <li role="none"><a role="menuitem" href="destination.html">Destinations</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1 class="page-title">Culture of Oman</h1>
+  </div>
+</section>
+
+<main class="page-main">
+
+  <!-- Culture Content -->
+  <section class="two-column-section">
+    <div class="text-column">
+      <h2>Culture of Oman</h2>
+      <p>Oman's culture is a vibrant mix of traditions, music, and crafts. From bustling souks to intricate silver jewelry, Omani heritage reflects centuries of trade and exchange with the world.</p>
+      <p>Traditional music, dance, and cuisine remain central to everyday life, while festivals and local customs celebrate the country's rich identity. Visitors can experience the warmth and hospitality that Omanis are renowned for.</p>
+    </div>
+
+    <figure class="image-column">
+      <img 
+        class="single-image" 
+        src="pictures /pexels-kenza-benaouda-29106256-35112608.jpg" 
+        alt="picture by Kenza Benaouda showing traditional Omani cultural elements">
+      <figcaption class="single-image-caption">
+        Experience the rich cultural heritage of Oman.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <h2>Omani Culture in Motion</h2>
+
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/7tBNgwzkzPo"
+        title="Omani culture and traditions video"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="media-credit">
+      Video source: YouTube
+    </p>
+    <h2>Omani Culture </h2>
+    <p>
+      Oman’s culture is a living tapestry of traditions, music, dance, and craftsmanship that continues to thrive in daily life. From the rhythmic beats of traditional music to the intricate patterns 
+      of silver jewelry and textiles, every aspect of Omani heritage tells a story of the country’s rich history and connections to the wider world. Visitors are greeted with the warmth and hospitality that Omanis are renowned for, making cultural experiences deeply immersive and memorable.
+    </p>
+   <div class="btn-center">
+  <a class="home-btn" href="index.html">Home</a>
+</div>  
+  </section>
+
+
+  
+
+
+
+</main>
+
+<footer>
+  <div style="max-width:1200px;margin:0 auto;padding:1rem 5%;color:#fff;">
+    &copy; Travel Oman
+  </div>
+</footer>
+
+<script>
+function toggleMenu(navId, btn) {
+  const nav = document.getElementById(navId);
+  if (!nav || !btn) return;
+  const isOpen = nav.classList.toggle('active');
+  btn.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  if (isOpen) {
+    const firstLink = nav.querySelector('a');
+    if (firstLink) firstLink.focus();
+  } else {
+    btn.focus();
+  }
+}
+</script>
+
+</body>
+</html>

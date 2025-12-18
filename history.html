@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>History</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+    <body class="history-page">
+    
+
+<section class="hero no-bg" id="home">
+	<!-- Navbar -->
+	<nav>
+		<div class="logo">Travel Oman</div>
+
+		<!-- Hamburger Button -->
+		<button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+			aria-controls="primary-navigation-geo"
+			onclick="toggleMenu('primary-navigation-geo', this)">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<!-- Navigation Links -->
+		<ul class="nav-links" id="primary-navigation-geo" role="menubar" aria-hidden="true">
+       <li role="none"><a role="menuitem" href="about .html">About</a></li>
+			<li role="none"><a role="menuitem" href="index.html">Home</a></li>
+			<li role="none"><a role="menuitem" href="thingstodo.hml">Things to Do</a></li>
+			<li role="none"><a role="menuitem" href="destination.html">Destinations</a></li>
+			<li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<div class="hero-content">
+		<h1 class="page-title">History of Oman</h1>
+	</div>
+</section>
+
+<main class="page-main">
+
+  <!-- Section 1 — Intro -->
+  <section class="two-column-section">
+    <figure class="image-column-left">
+      <img class="single-image" src="pictures /history1pexels-reyyan-505450018-30785924.jpg" alt="picures by reyyan	">
+      <figcaption class="single-image-caption">
+        Stunning Fort Architecture in Oman
+      </figcaption>
+    </figure>
+<div class="scroll-text">Scroll</div>
+    <div class="text-column-right">
+      <h2>Oman</h2>
+      <p>Oman is a land of rich heritage and ancient traditions, with a history that spans thousands of years. From its early settlements along the Arabian Peninsula to its role as a powerful maritime empire, Oman has played a significant part in the trade and culture of the region.</p>
+    </div>
+  </section>
+
+  <!-- Section 2 — Ancient Civilization -->
+  <section class="two-column-section">
+    <div class="text-column">
+      <h2>Ancient Civilization and Early Trade</h2>
+      <p>Oman’s history dates back to the Bronze Age, with archaeological sites revealing early human settlements and trade networks. The strategic location along the Arabian Sea allowed Omanis to trade frankincense, copper, and other valuable commodities with civilizations in Mesopotamia, Egypt, and the Indus Valley.</p>
+    </div>
+
+    <figure class="image-column">
+      <img class="single-image" src="pictures /pexels-reyyan-505450018-30877288.jpg" alt="picures by reyyan	">
+      <figcaption class="single-image-caption">Trade and early settlements shaped Oman’s beginnings.</figcaption>
+      
+    </figure>
+   
+  </section>
+
+  <!-- Section 3 — Islamic Era -->
+  <section class="two-column-section">
+    <figure class="image-column-left">
+      <img class="single-image" src="pictures /pexels-saud-aloufi-1576572527-27307136.jpg" alt="picures by saud aloufi	">
+      <figcaption class="single-image-caption">
+        The Islamic era introduced new traditions and culture.
+      </figcaption>
+    </figure>
+
+    <div class="text-column-right">
+      <h2>Islamic Era and Maritime Power</h2>
+      <p>In the 7th century, Oman embraced Islam, bringing significant cultural and political change. By the 17th and 18th centuries, Oman became a powerful maritime empire, establishing trade routes across the Indian Ocean, East Africa, and India. Muscat grew into a thriving port for merchants and explorers.</p>
+    </div>
+  </section>
+
+  
+  <!-- Section 5 — Modern Oman -->
+  <section class="two-column-section">
+    <figure class="image-column-left">
+      <img class="single-image" src="pictures /modernpexels-marybellphoto-27024465.jpg" alt="picures by marybellphoto	">
+      <figcaption class="single-image-caption">
+        Tradition and progress in harmony.
+      </figcaption>
+    </figure>
+
+    <div class="text-column-right">
+      <h2>Modern Oman</h2>
+      <p>In the 20th century, Oman underwent rapid modernization under Sultan Qaboos bin Said, developing infrastructure, education, and the economy while preserving cultural heritage. Today, Oman blends ancient history with modern growth, offering visitors a unique and authentic experience.</p>
+
+      <div class="btn-center">
+  <a class="home-btn" href="index.html">Home</a>
+</div>  
+    </div>
+  </section>
+
+</main>
+
+<footer>
+	<div style="max-width:1200px;margin:0 auto;padding:1rem 5%;color:#fff;">
+		&copy; Travel Oman
+	</div>
+</footer>
+
+<script>
+function toggleMenu(navId, btn) {
+	const nav = document.getElementById(navId);
+	if (!nav || !btn) return;
+	const isOpen = nav.classList.toggle('active');
+	btn.classList.toggle('open');
+	btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+	nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+	if (isOpen) {
+		const firstLink = nav.querySelector('a');
+		if (firstLink) firstLink.focus();
+	} else {
+		btn.focus();
+	}
+}
+</script>
+
+</body>
+</html>

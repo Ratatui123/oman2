@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture — Oman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<script>
+function setupCarousel(id) {
+  const carousel = document.getElementById(id);
+  const slides = carousel.querySelector('.slides');
+  const total = slides.children.length;
+  const dotsContainer = carousel.querySelector('.dots');
+
+  // Create dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('span');
+    dot.onclick = () => goToSlide(id, i);
+    dotsContainer.appendChild(dot);
+  }
+
+  goToSlide(id, 0);
+
+  // Autoplay
+  setInterval(() => nextSlide(id), 5000);
+}
+
+function goToSlide(id, index) {
+  const carousel = document.getElementById(id);
+  const slides = carousel.querySelector('.slides');
+  const dots = carousel.querySelectorAll('.dots span');
+  const total = slides.children.length;
+
+  slides.style.transform = `translateX(-${index * 100}%)`;
+  carousel.setAttribute('data-index', index);
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
+
+function nextSlide(id) {
+  const carousel = document.getElementById(id);
+  const index = parseInt(carousel.getAttribute('data-index') || 0);
+  const total = carousel.querySelector('.slides').children.length;
+  goToSlide(id, (index + 1) % total);
+}
+
+function prevSlide(id) {
+  const carousel = document.getElementById(id);
+  const index = parseInt(carousel.getAttribute('data-index') || 0);
+  const total = carousel.querySelector('.slides').children.length;
+  goToSlide(id, (index - 1 + total) % total);
+}
+
+window.onload = () => {
+  setupCarousel("carousel-muscat");
+  setupCarousel("carousel-nizwa");
+  setupCarousel("carousel-wahiba");
+  setupCarousel("carousel-jebel");
+};
+</script>
+
+
+<body>
+
+ 
+
+
+    <body class="culture-page"></body>
+<section class="hero no-bg" id="home">
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Travel Oman</div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+      aria-controls="primary-navigation-culture"
+      onclick="toggleMenu('primary-navigation-culture', this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="primary-navigation-culture" role="menubar" aria-hidden="true">
+       <li role="none"><a role="menuitem" href="about .html">About</a></li>
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="thingstodo.html">Things to Do</a></li>
+      <li role="none"><a role="menuitem" href="destination.html">Destinations</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1 class="page-title">Culture of Oman</h1>
+  </div>
+</section>
+
+<main class="page-main modern-destinations">
+
+  <!-- ===== Destination 1 - Muscat ===== -->
+  <section class="destination-block">
+    <div class="destination-image">
+      <div class="carousel modern" id="carousel-muscat">
+        <div class="slides">
+          <img src="pictures /pexels-reyyan-505450018-30982828.jpg" alt="picture by">
+          <img src="pictures /pexels-khalid-belhaji-2150666179-31867547.jpg" alt="picture by Khalid Belhaji">
+          <img src="pictures /pexels-karen-avery-774852971-28718669.jpg" alt="picture by Karen Avery">
+        </div>
+
+        <button class="nav prev" onclick="prevSlide('carousel-muscat')">❮</button>
+        <button class="nav next" onclick="nextSlide('carousel-muscat')">❯</button>
+
+        <div class="dots"></div>
+      </div>
+      <figcaption>Explore the vibrant capital city of Muscat.</figcaption>
+    </div>
+
+    <div class="destination-info">
+      <h2>Muscat</h2>
+      <p>The capital city of Oman, Muscat offers stunning beaches, historic forts, and lively markets. Perfect for culture lovers and first-time visitors.</p>
+    </div>
+  </section>
+  
+  <div class="scroll-text">Scroll</div>
+
+
+  <!-- ===== Destination 2 - Nizwa ===== -->
+  <section class="destination-block reverse">
+    <div class="destination-info">
+      <h2>Nizwa</h2>
+      <p>Nizwa is known for its ancient fort, bustling souq, and rich Omani heritage. Dive into traditional crafts, spices, and local cuisine.</p>
+    </div>
+
+    <div class="destination-image">
+      <div class="carousel modern" id="carousel-nizwa">
+        <div class="slides">
+          <img src="pictures /pexels-reyyan-505450018-30831424.jpg" alt="picture by Reyyan">
+          <img src="pictures /pexels-reyyan-505450018-30815255.jpg" alt="picture by Reyyan">
+          <img src="pictures /pexels-smitesh-parekh-3244931-34376621.jpg" alt="picture by Smitesh Parekh">
+        </div>
+
+        <button class="nav prev" onclick="prevSlide('carousel-nizwa')">❮</button>
+        <button class="nav next" onclick="nextSlide('carousel-nizwa')">❯</button>
+
+        <div class="dots"></div>
+      </div>
+      <figcaption>Experience Oman's cultural heart in Nizwa.</figcaption>
+    </div>
+  </section>
+
+  <!-- ===== Destination 3 - Wahiba Sands ===== -->
+  <section class="destination-block">
+    <div class="destination-image">
+      <div class="carousel modern" id="carousel-wahiba">
+        <div class="slides">
+          <img src="pictures /pexels-reyyan-505450018-30815255.jpg" alt="picture by Reyyan">
+          <img src="pictures /pexels-reyyan-505450018-30891651.jpg" alt="picture by Reyyan">
+          <img src="pictures /pexels-vincent-ma-janssen-19786030.jpg" alt="picture by Vincent Ma Janssen">
+        </div>
+
+        <button class="nav prev" onclick="prevSlide('carousel-wahiba')">❮</button>
+        <button class="nav next" onclick="nextSlide('carousel-wahiba')">❯</button>
+
+        <div class="dots"></div>
+      </div>
+      <figcaption>Feel the vast golden dunes of Wahiba Sands.</figcaption>
+    </div>
+
+    <div class="destination-info">
+      <h2>Wahiba Sands</h2>
+     
+      <p>Immerse yourself in the desert life of Wahiba Sands. Enjoy camel rides, sandboarding, and traditional Bedouin hospitality.</p>
+    <a class="home-btn" href="index.html">Home</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div style="max-width:1200px;margin:0 auto;padding:1rem 5%;color:#fff;">
+    &copy; Travel Oman
+  </div>
+</footer>
+
+<script>
+function toggleMenu(navId, btn) {
+  const nav = document.getElementById(navId);
+  if (!nav || !btn) return;
+  const isOpen = nav.classList.toggle('active');
+  btn.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  if (isOpen) {
+    const firstLink = nav.querySelector('a');
+    if (firstLink) firstLink.focus();
+  } else {
+    btn.focus();
+  }
+}
+</script>
+
+</body>
+</html>

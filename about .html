@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About This Project — Travel Oman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="about-page">
+
+<!-- Hero / Navigation -->
+<section class="hero no-bg">
+  <nav>
+    <div class="logo">Travel Oman</div>
+
+    <button class="hamburger"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="primary-navigation-about"
+      onclick="toggleMenu('primary-navigation-about', this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="primary-navigation-about" role="menubar" aria-hidden="true">
+      <li role="none"><a role="menuitem" href="about .html">About</a></li>
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="thingstodo.html">Things to Do</a></li>
+      <li role="none"><a role="menuitem" href="destination.html">Destinations</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1 class="page-title">About This Project</h1>
+  </div>
+</section>
+
+<main class="page-main">
+
+  <!-- Section 1 — Project Overview -->
+  <section class="two-column-section">
+    <div class="text-column">
+      <h2>Project Overview</h2>
+      <p>
+        Travel Oman is a responsive showcase website created as part of Project 4 for a web design course. The goal of this project was to design and build a multi-page site that demonstrates responsive layout techniques, visual hierarchy, accessibility best practices, and interactive elements.
+      </p>
+      <p>
+        Oman was chosen as the focus due to its rich culture, diverse geography, and growing appeal as a travel destination. The site is designed to inform and inspire travelers while presenting content in a clear, modern, and engaging way.
+      </p>
+    </div>
+
+    <figure class="image-column">
+      <img
+        class="single-image"
+        src="pictures /pexels-saad-alawi-123396395-29285014.jpg"
+        alt="Picture by Saad Alawi showing a collage of Oman's culture, geography, and travel scenes">
+      <figcaption class="single-image-caption">
+        Exploring Oman through culture, geography, and travel experiences.
+      </figcaption>
+    </figure>
+    
+  </section>
+<div class="scroll-text">Scroll </div>
+  <!-- Section 2 — Design & Learning Goals -->
+  <section class="two-column-section">
+    <figure class="image-column-left">
+      <img
+        class="single-image"
+        src="pictures /pexels-sudhakaran-puthiyedath-155869790-10998247.jpg"
+        alt="picture by Sudhakaran Puthiyedath showing natural landscapes in Oman">
+      <figcaption class="single-image-caption">
+        Natural landscapes that influenced the site’s visual direction.
+      </figcaption>
+    </figure>
+
+    <div class="text-column-right">
+      <h2>Design & Learning Goals</h2>
+      <p>
+        This project emphasizes responsive web design using CSS Grid and Flexbox, semantic HTML structure, and accessibility considerations such as readable contrast, alt text, and keyboard-friendly navigation.
+      </p>
+      <p>
+        The overall visual style focuses on clarity, balance, and scanability, allowing users to explore content easily across mobile and desktop devices.
+      </p>
+
+      <a class="home-btn" href="index.html">Back to Home</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div style="max-width:1200px;margin:0 auto;padding:1rem 5%;color:#fff;">
+    &copy; Travel Oman
+  </div>
+</footer>
+
+<script>
+function toggleMenu(navId, btn) {
+  const nav = document.getElementById(navId);
+  if (!nav || !btn) return;
+  const isOpen = nav.classList.toggle('active');
+  btn.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  if (isOpen) {
+    const firstLink = nav.querySelector('a');
+    if (firstLink) firstLink.focus();
+  } else {
+    btn.focus();
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero" id="home">
+  <!-- Navbar over image -->
+  <nav>
+    <div class="logo">Travel Oman</div>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="primary-navigation" role="menubar" aria-hidden="true">
+       <li role="none"><a role="menuitem" href="about .html">About</a></li>
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="thingstodo.html">Things to Do</a></li>
+      <li role="none"><a role="menuitem" href="destination.html">Destinations</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <h1>Welcome to Oman</h1>
+</section>
+
+<section class="cards-section">
+  <h2>About Oman</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="pictures /history cardpexels-christine cleireny-19840387.jpg" alt="picture by Christine Cleireny">
+      <h3>History</h3>
+      <p>Explore old architecturs and landscapes.</p>
+      <a class="card-cta" href="history.html">Read</a>
+    </div>
+    <div class="card">
+      <img src="pictures /pexels-beytlik-7522157.jpg" alt="picture by Beytlik Photography">
+      <h3>Culture</h3>
+      <p>Discover Oman's culture.</p>
+      <a class="card-cta" href="culture.html">Read</a>
+    </div>
+    <div class="card">
+      <img src="pictures /landscapescradpexels-ahmed-al-khamisi-2531057-9674297.jpg" alt="picture by Ahmed Al-Khamisi">
+      <h3>Geography</h3>
+      <p>Experience the Oman's nature.</p>
+       <a class="card-cta" href="geography.html">Read</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width:1200px;margin:0 auto;padding:1rem 5%;color:#fff;">
+    &copy; Travel Oman
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById('primary-navigation');
+  const btn = document.querySelector('.hamburger');
+  if (!nav || !btn) return;
+  const isOpen = nav.classList.toggle('active');
+  btn.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  if (isOpen) {
+    const firstLink = nav.querySelector('a');
+    if (firstLink) firstLink.focus();
+  } else {
+    btn.focus();
+  }
+}
+</script>
+
+</body>
+</html>
