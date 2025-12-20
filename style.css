@@ -1099,34 +1099,3 @@ footer {
   color: #fff;
   
 }
-.image-column {
-  position: relative;
-}
-
-.single-image {
-  width: 100%;
-  display: block;
-}
-
-/* Credit inside image */
-.photo-credit {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 0.75rem;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-/* Caption below image */
-.image-caption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #444;
-}
-
-.caption-text {
-  display: block;
-}
