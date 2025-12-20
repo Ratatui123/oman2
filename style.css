@@ -22,8 +22,8 @@
   --max-width: 1200px;
 
   /* Glass effect */
-  --glass: rgba(0, 0, 0, 0.2);
-  --glass-strong: rgba(0, 0, 0, 0.6);
+  --glass:#8A8888;
+  --glass-strong: #8A8888;
 }
 
 /* ========== BASE STYLES ========== */
