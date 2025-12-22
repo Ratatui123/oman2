@@ -251,7 +251,7 @@ nav .nav-links li a:hover::after {
 }
 
 .card {
-  background: #d0d0d0;
+  background: #ffffff;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
