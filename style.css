@@ -260,7 +260,7 @@ nav .nav-links li a:hover::after {
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 26px rgba(255, 98, 0, 0.15);
+  box-shadow:0 6px 26px rgb(0, 0, 0);;
 }
 
 .card img {
